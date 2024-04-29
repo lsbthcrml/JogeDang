@@ -11,6 +11,7 @@
 		124F82D42BDF91E5003A1B02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F82D32BDF91E5003A1B02 /* ContentView.swift */; };
 		124F82D62BDF91E6003A1B02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124F82D52BDF91E6003A1B02 /* Assets.xcassets */; };
 		124F82D92BDF91E6003A1B02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124F82D82BDF91E6003A1B02 /* Preview Assets.xcassets */; };
+		124F82E02BDF93AA003A1B02 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F82DF2BDF93AA003A1B02 /* SplashScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		124F82D32BDF91E5003A1B02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		124F82D52BDF91E6003A1B02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		124F82D82BDF91E6003A1B02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		124F82DF2BDF93AA003A1B02 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				124F82D12BDF91E5003A1B02 /* JogeDangApp.swift */,
+				124F82DF2BDF93AA003A1B02 /* SplashScreen.swift */,
 				124F82D32BDF91E5003A1B02 /* ContentView.swift */,
 				124F82D52BDF91E6003A1B02 /* Assets.xcassets */,
 				124F82D72BDF91E6003A1B02 /* Preview Content */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				124F82E02BDF93AA003A1B02 /* SplashScreen.swift in Sources */,
 				124F82D42BDF91E5003A1B02 /* ContentView.swift in Sources */,
 				124F82D22BDF91E5003A1B02 /* JogeDangApp.swift in Sources */,
 			);
