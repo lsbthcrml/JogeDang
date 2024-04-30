@@ -3,51 +3,44 @@
 //  JogeDang
 //
 //  Created by Ibnu Nawawi on 30/04/24.
+
+
 import SwiftUI
 
 struct TimerView: View {
-    @State private var progress: Double = 0.0
+    @State private var timerValue: Double = 0.0
+    let totalTime: Double = 70
+    let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack {
-            Spacer()
-            
             ZStack {
                 Circle()
-                    .stroke(lineWidth: 20)
+                    .stroke(Color.gray, lineWidth: 10)
                     .opacity(0.3)
-                    .foregroundColor(.blue)
                 
                 Circle()
-                    .trim(from: 0.0, to: CGFloat(progress / 30))
-                    .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round, lineJoin: .round))
-                    .foregroundColor(.blue)
-                    .rotationEffect(.degrees(-90))
-//                    .animation(.linear(duration: 30))
-                    .onAppear {
-                        startTimer()
-                    }
+                    .trim(from: 0.0, to: CGFloat(timerValue / totalTime))
+                    .stroke(Color.red, style: StrokeStyle(lineWidth: 10, lineCap: .round))
+                    .rotationEffect(Angle(degrees: -90))
+                    .animation(.linear(duration: 0.1))
+                
                 
             }
-            .frame(width: 30, height: 50)
+            .frame(width: 30, height: 30)
             
             Spacer()
         }
-    }
-    
-    func startTimer() {
-        _ = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-            progress += 1.0
-            
-            if progress >= 30 {
-                timer.invalidate()
+        .onReceive(timer) { _ in
+            if self.timerValue < self.totalTime {
+                self.timerValue += 0.1
+            } else {
+                self.timerValue = 0.0
             }
         }
     }
 }
 
 #Preview {
-        TimerView()
-    }
-
-//dughbiudfhiuhdfiuheiufhb
+    TimerView()
+}

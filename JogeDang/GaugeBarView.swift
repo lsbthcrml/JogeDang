@@ -14,18 +14,20 @@ struct VerticalCapsuleButton: View {
     var body: some View {
         ZStack {
             Capsule()
-                .frame(width: 30, height: 250)
+                .frame(width: 30, height: 350)
                 .foregroundColor(Color.gray.opacity(0.1))
                 .overlay(
-                    Capsule()
-                        .stroke(Color.pink.opacity(0.4), lineWidth: 4))
+            Capsule()
+                .stroke(Color.pink.opacity(0.4), lineWidth: 4))
+            
             
             LinearGradient(gradient: getGradientColors(), startPoint: .bottom, endPoint: .top)
                 .mask(
                     Capsule()
-                        .frame(width: 26, height: 245 * fillAmount)
+                        .frame(width: 26, height: 295 * fillAmount)
+                    
                 )
-               .animation(Animation.linear(duration: totalAnimationDuration))
+                .animation(Animation.linear(duration: totalAnimationDuration))
         }
         .onAppear {
             fillAmount = 1.0
@@ -45,4 +47,3 @@ struct VerticalCapsuleButton: View {
 #Preview {
         VerticalCapsuleButton()
     }
-
