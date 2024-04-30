@@ -12,7 +12,6 @@ struct Combined: View {
         
         ZStack {
             VideoView()
-            
             VStack {
                 VStack {
                     TimerView()
@@ -21,27 +20,26 @@ struct Combined: View {
                 }
                 .offset(x:-150)
                 ButtonMusicView()
-//                    .offset(y:130)
+                //                    .offset(y:130)
             }
-            
         }
-//        VStack{
-//            
-//            Spacer()
-//            HStack {
-//               
-//                VStack {
-//                    VideoView()
-//                    TimerView()
-//                    VerticalCapsuleButton()
-//                }
-//                Spacer()
-//                
-//            }
-//            
-//            Spacer()
-//            ButtonMusicView()
-//        }
+        //        VStack{
+        //
+        //            Spacer()
+        //            HStack {
+        //
+        //                VStack {
+        //                    VideoView()
+        //                    TimerView()
+        //                    VerticalCapsuleButton()
+        //                }
+        //                Spacer()
+        //
+        //            }
+        //
+        //            Spacer()
+        //            ButtonMusicView()
+        //        }
     }
 }
 
@@ -52,7 +50,7 @@ struct VideoView: UIViewControllerRepresentable{
     
     func makeUIViewController(context: Context) -> some UIViewController {
         let vc = ViewController()
-
+        
         return vc
     }
 }

@@ -12,6 +12,7 @@
 		124F82D62BDF91E6003A1B02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124F82D52BDF91E6003A1B02 /* Assets.xcassets */; };
 		124F82D92BDF91E6003A1B02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124F82D82BDF91E6003A1B02 /* Preview Assets.xcassets */; };
 		124F82E02BDF93AA003A1B02 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F82DF2BDF93AA003A1B02 /* SplashScreen.swift */; };
+		30F45CC32BE0E556008762F7 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F45CC22BE0E556008762F7 /* ResultView.swift */; };
 		54ADACA62BE0823C00CBFB8F /* ButtonMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ADACA52BE0823C00CBFB8F /* ButtonMusicView.swift */; };
 		54ADACA92BE0828F00CBFB8F /* lagu1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 54ADACA82BE0828E00CBFB8F /* lagu1.mp3 */; };
 		54ADACAB2BE082C000CBFB8F /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ADACAA2BE082C000CBFB8F /* TimerView.swift */; };
@@ -29,6 +30,7 @@
 		124F82D52BDF91E6003A1B02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		124F82D82BDF91E6003A1B02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		124F82DF2BDF93AA003A1B02 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		30F45CC22BE0E556008762F7 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		54ADACA52BE0823C00CBFB8F /* ButtonMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonMusicView.swift; sourceTree = "<group>"; };
 		54ADACA82BE0828E00CBFB8F /* lagu1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lagu1.mp3; sourceTree = "<group>"; };
 		54ADACAA2BE082C000CBFB8F /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				54ADACA52BE0823C00CBFB8F /* ButtonMusicView.swift */,
 				54ADACAC2BE0830400CBFB8F /* GaugeBarView.swift */,
 				54ADACB22BE085A000CBFB8F /* Combined.swift */,
+				30F45CC22BE0E556008762F7 /* ResultView.swift */,
 				54ADACA72BE0828E00CBFB8F /* Lagu */,
 				124F82D52BDF91E6003A1B02 /* Assets.xcassets */,
 				124F82D72BDF91E6003A1B02 /* Preview Content */,
@@ -183,6 +186,7 @@
 			files = (
 				54ADACBA2BE096A200CBFB8F /* ViewController.swift in Sources */,
 				54ADACB62BE0968000CBFB8F /* VideoCapture.swift in Sources */,
+				30F45CC32BE0E556008762F7 /* ResultView.swift in Sources */,
 				124F82E02BDF93AA003A1B02 /* SplashScreen.swift in Sources */,
 				54ADACA62BE0823C00CBFB8F /* ButtonMusicView.swift in Sources */,
 				54ADACAD2BE0830400CBFB8F /* GaugeBarView.swift in Sources */,
