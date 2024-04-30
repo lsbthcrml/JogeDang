@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ImageChanger: View {
     @State private var currentImageIndex = 0
+    
     var images: [Image]
 
     var body: some View {
