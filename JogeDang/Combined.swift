@@ -17,6 +17,8 @@ struct Combined: View {
                 InterfaceView()
             }
             
+            //insert filter
+            
         }
 
     }
