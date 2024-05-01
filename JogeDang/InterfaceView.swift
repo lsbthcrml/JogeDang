@@ -21,7 +21,7 @@ struct InterfaceView: View {
         VStack {
             ZStack {
                 Circle()
-                    .stroke(Color.gray, lineWidth: 10)
+                    .stroke(Color.white, lineWidth: 10)
                     .opacity(0.3)
                 
                 Circle()
@@ -37,11 +37,17 @@ struct InterfaceView: View {
             
             ZStack(alignment: .bottom) {
                 Capsule()
-                    .frame(width: 28, height: 400)
+                    .frame(width: 22, height: 400)
                     .foregroundColor(Color.gray.opacity(0.1))
                     .overlay(
                         Capsule()
-                            .stroke(Color.white.opacity(1), lineWidth: 8))
+                            .stroke(Color.black.opacity(1), lineWidth: 6)
+                            .overlay(
+                                Capsule()
+                                    .stroke(Color.white, lineWidth: 5)
+                            )
+                    )
+                
                 Capsule()
                     .fill(LinearGradient(gradient: Gradient(colors: [Color.darkblue, Color.neonpurple, Color.neonpink, Color.neonyellow, Color.neongreen]), startPoint: .bottom, endPoint: .top))
                     .frame(width: 20, height: CGFloat(elapsedTime / totalTime * 400))
@@ -123,5 +129,5 @@ struct InterfaceView: View {
 
 
 #Preview {
-        InterfaceView()
-    }
+    InterfaceView()
+}
