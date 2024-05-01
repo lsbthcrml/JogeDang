@@ -10,7 +10,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isActive: Bool = false
+    @State var isActive: Bool = true
     @State var images: [Image]
     var body: some View {
         

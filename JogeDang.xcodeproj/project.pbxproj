@@ -13,14 +13,13 @@
 		124F82D92BDF91E6003A1B02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124F82D82BDF91E6003A1B02 /* Preview Assets.xcassets */; };
 		124F82E02BDF93AA003A1B02 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F82DF2BDF93AA003A1B02 /* SplashScreen.swift */; };
 		3077F6A82BE23AB600D20F39 /* DanceModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3077F6A72BE23AB600D20F39 /* DanceModel.mlmodel */; };
-		30F45CC32BE0E556008762F7 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F45CC22BE0E556008762F7 /* ResultView.swift */; };
-		54ADACA62BE0823C00CBFB8F /* ButtonMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ADACA52BE0823C00CBFB8F /* ButtonMusicView.swift */; };
 		54ADACA92BE0828F00CBFB8F /* lagu1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 54ADACA82BE0828E00CBFB8F /* lagu1.mp3 */; };
 		54ADACB32BE085A000CBFB8F /* Combined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ADACB22BE085A000CBFB8F /* Combined.swift */; };
 		54ADACB62BE0968000CBFB8F /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ADACB52BE0968000CBFB8F /* VideoCapture.swift */; };
 		54ADACB82BE0969100CBFB8F /* Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ADACB72BE0969100CBFB8F /* Predictor.swift */; };
 		54ADACBA2BE096A200CBFB8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ADACB92BE096A200CBFB8F /* ViewController.swift */; };
 		54EC529D2BE205CD003F33AF /* InterfaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC529C2BE205CD003F33AF /* InterfaceView.swift */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		124F82CE2BDF91E5003A1B02 /* JogeDang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JogeDang.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,8 +29,7 @@
 		124F82D82BDF91E6003A1B02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		124F82DF2BDF93AA003A1B02 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		3077F6A72BE23AB600D20F39 /* DanceModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DanceModel.mlmodel; sourceTree = "<group>"; };
-		30F45CC22BE0E556008762F7 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
-		54ADACA52BE0823C00CBFB8F /* ButtonMusicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonMusicView.swift; sourceTree = "<group>"; };
+		307B0BFB2BE24023009E9D89 /* DanceModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = DanceModel.mlmodel; path = "../../../03_NANO 1 (GO YOUNG)/JogeDang/JogeDang/DanceModel.mlmodel"; sourceTree = "<group>"; };
 		54ADACA82BE0828E00CBFB8F /* lagu1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lagu1.mp3; sourceTree = "<group>"; };
 		54ADACB22BE085A000CBFB8F /* Combined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combined.swift; sourceTree = "<group>"; };
 		54ADACB52BE0968000CBFB8F /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
@@ -56,6 +54,7 @@
 			children = (
 				124F82D02BDF91E5003A1B02 /* JogeDang */,
 				124F82CF2BDF91E5003A1B02 /* Products */,
+				307B0BFA2BE24000009E9D89 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +90,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		307B0BFA2BE24000009E9D89 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				3077F6A72BE23AB600D20F39 /* DanceModel.mlmodel */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		54ADACA72BE0828E00CBFB8F /* Lagu */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +109,7 @@
 		54ADACB42BE08E3600CBFB8F /* VideoView */ = {
 			isa = PBXGroup;
 			children = (
-				3077F6A92BE23EC000D20F39 /* DanceModel.mlmodel */,
+				307B0BFB2BE24023009E9D89 /* DanceModel.mlmodel */,
 				54ADACB52BE0968000CBFB8F /* VideoCapture.swift */,
 				54ADACB72BE0969100CBFB8F /* Predictor.swift */,
 				54ADACB92BE096A200CBFB8F /* ViewController.swift */,
@@ -181,9 +188,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3077F6AA2BE23EC000D20F39 /* DanceModel.mlmodel in Sources */,
 				54ADACBA2BE096A200CBFB8F /* ViewController.swift in Sources */,
 				54ADACB62BE0968000CBFB8F /* VideoCapture.swift in Sources */,
+				307B0BFD2BE24093009E9D89 /* DanceModel.mlmodel in Sources */,
 				124F82E02BDF93AA003A1B02 /* SplashScreen.swift in Sources */,
 				54EC529D2BE205CD003F33AF /* InterfaceView.swift in Sources */,
 				54ADACB32BE085A000CBFB8F /* Combined.swift in Sources */,

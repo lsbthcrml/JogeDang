@@ -82,15 +82,18 @@ class Predictor {
 
     func estimation(sampleBuffer: CMSampleBuffer) {
         let requestHandler = VNImageRequestHandler(cmSampleBuffer: sampleBuffer, orientation: .up)
+//        let requestHandler = VNSequenceRequestHandler()
 
         let request = VNDetectHumanBodyPoseRequest(completionHandler: bodyPoseHandler)
 
         do {
             try requestHandler.perform([request])
+//            try requestHandler.perform([request], on: sampleBuffer, orientation: .up)
         } catch {
-            print("Unable to perform the request, with error: \(error)")
+            print("Unable to perform the request, with error: \(error.localizedDescription)")
         }
     }
+    
     func bodyPoseHandler(request: VNRequest, error: Error?){
         guard let observations = request.results as? [VNHumanBodyPoseObservation] else {
             return }
@@ -100,11 +103,11 @@ class Predictor {
         }
         if let result = observations.first {
             storeObservation(result)
-
             labelActionType()
         }
 
     }
+    
     func labelActionType() {
         guard let danceClassifier = try? danceClassifier(configuration: MLModelConfiguration()),
         let poseMultiArray = prepareInputWithObservations(posesWindow),
