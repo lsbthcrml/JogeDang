@@ -11,28 +11,18 @@ struct Combined: View {
     var body: some View {
         
         ZStack {
-            VideoView().ignoresSafeArea()
+          VideoView().ignoresSafeArea()
             
             VStack {
-                VStack {
-                    TimerView()
-                        .offset(y: 170)
-                    VerticalCapsuleButton()
-                        .offset(y: -30)
-                    
-                }
-                .offset(x:-150)
-                ButtonMusicView()
-                    .offset(y:-45)
-                    .onTapGesture {
-                        
-                    }
+                InterfaceView()
             }
             
         }
 
     }
 }
+
+
 
 struct VideoView: UIViewControllerRepresentable{
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
