@@ -131,9 +131,9 @@ class Predictor {
             }
         }
         if numAvailableFrames < observationsNeeded {
-            for _ in 0 ..<(observationsNeeded - numAvailableFrames) {
+            for _ in 0..<(observationsNeeded - numAvailableFrames) {
                 do {
-                    let oneFrameMultiArray = try MLMultiArray(shape: [1,3,18], dataType: Double)
+                    let oneFrameMultiArray = try MLMultiArray(shape: [1,3,18], dataType: MLMultiArrayDataType.double)
                     try resetMultiArray(oneFrameMultiArray)
                     multiArrayBuffer.append(oneFrameMultiArray)
                 } catch {

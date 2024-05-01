@@ -116,7 +116,7 @@ extension ViewController: PredictorDelegate {
             print("Dance detected")
             isDanceDetected = true
 
-            DispatchQueue.main.asyncAfter(deadline:  .now() +3);, {
+            DispatchQueue.main.asyncAfter(deadline: .now()+3) {
                 self.isDanceDetected = false
             }
             DispatchQueue.main.async {
