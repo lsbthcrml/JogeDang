@@ -76,14 +76,19 @@ import UIKit
 import AVFoundation
 import AudioToolbox
 
+protocol ViewControllerDelegate {
+    func addDanceTime(danceTime: TimeInterval)
+}
+
+
 class ViewController: UIViewController {
 
     let videoCapture = VideoCapture()
     var previewLayer: AVCaptureVideoPreviewLayer?
-
+    
+    var delegate: ViewControllerDelegate?
+    
     var pointsLayer = CAShapeLayer()
-
-    var isDanceDetected = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,16 +117,9 @@ class ViewController: UIViewController {
 
 extension ViewController: PredictorDelegate {
     func predictor(_ predictor: Predictor, didLabelAction action: String, with confidence: Double) {
-        if action == "dance" && confidence > 0.90 && isDanceDetected == false {
+        if action == "Goyang" && confidence > 0.80 || action == "None" && confidence < 0.20 {
             print("Dance detected")
-            isDanceDetected = true
-
-            DispatchQueue.main.asyncAfter(deadline: .now()+3) {
-                self.isDanceDetected = false
-            }
-            DispatchQueue.main.async {
-                AudioServicesPlayAlertSound(SystemSoundID(1322))
-            }
+            delegate?.addDanceTime(danceTime: 0.1)
         }
     }
 

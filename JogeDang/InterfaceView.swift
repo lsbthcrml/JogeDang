@@ -10,6 +10,7 @@ import AVKit
 struct InterfaceView: View {
     @State private var elapsedTime: TimeInterval = 0.0
     @State private var isMusicPlaying = false
+    @Binding var danceTime: TimeInterval
     let totalTime: TimeInterval = 70.0
     @State private var isPlaying = false
     @State private var audioPlayer: AVAudioPlayer?
@@ -36,24 +37,7 @@ struct InterfaceView: View {
             Spacer()
             
             ZStack(alignment: .bottom) {
-                Capsule()
-                    .frame(width: 22, height: 400)
-                    .foregroundColor(Color.gray.opacity(0.1))
-                    .overlay(
-                        Capsule()
-                            .stroke(Color.black.opacity(1), lineWidth: 6)
-                            .overlay(
-                                Capsule()
-                                    .stroke(Color.white, lineWidth: 5)
-                            )
-                    )
-                
-                Capsule()
-                    .fill(LinearGradient(gradient: Gradient(colors: [Color.darkblue, Color.neonpurple, Color.neonpink, Color.neonyellow, Color.neongreen]), startPoint: .bottom, endPoint: .top))
-                    .frame(width: 20, height: CGFloat(elapsedTime / totalTime * 400))
-                    .alignmentGuide(.bottom) { dimension in
-                        dimension[.bottom]
-                    }
+                GaugeBar(danceTime: $danceTime, totalTime: totalTime)
             }
             .offset(x: -150, y: 40)
             
@@ -84,6 +68,7 @@ struct InterfaceView: View {
                     self.timerValue += 0.1
                 } else {
                     self.timerValue = 0.0
+                    
                 }
             }
         }
@@ -128,6 +113,6 @@ struct InterfaceView: View {
 }
 
 
-#Preview {
-    InterfaceView()
-}
+//#Preview {
+//    InterfaceView(danceTime: <#Binding<Int>#>)
+//}

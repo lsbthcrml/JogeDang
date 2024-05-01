@@ -62,7 +62,7 @@
 import Foundation
 import Vision
 
-typealias danceClassifier = DanceModel
+typealias DanceClassifier = DanceModel
 
 protocol PredictorDelegate : AnyObject {
     func predictor(_ predictor: Predictor, didFindNewRecognizedPoints points: [CGPoint])
@@ -95,12 +95,13 @@ class Predictor {
     }
     
     func bodyPoseHandler(request: VNRequest, error: Error?){
-        guard let observations = request.results as? [VNHumanBodyPoseObservation] else {
-            return }
+        guard let observations = request.results as? [VNHumanBodyPoseObservation] else { return }
 
+//        observations.first?.recognizedPoints(.all)
         observations.forEach {
             processObservation($0)
         }
+        
         if let result = observations.first {
             storeObservation(result)
             labelActionType()
@@ -109,9 +110,9 @@ class Predictor {
     }
     
     func labelActionType() {
-        guard let danceClassifier = try? danceClassifier(configuration: MLModelConfiguration()),
-        let poseMultiArray = prepareInputWithObservations(posesWindow),
-            let predictions = try? danceClassifier.prediction(poses: poseMultiArray) else {
+        guard let danceClassifier = try? DanceClassifier(configuration: MLModelConfiguration()),
+              let poseMultiArray = prepareInputWithObservations(posesWindow),
+              let predictions = try? danceClassifier.prediction(poses: poseMultiArray) else {
             return
         }
         let label = predictions.label
@@ -119,9 +120,10 @@ class Predictor {
 
         delegate?.predictor(self, didLabelAction: label, with: confidence)
     }
+    
     func prepareInputWithObservations(_ observation: [VNHumanBodyPoseObservation]) -> MLMultiArray? {
         let numAvailableFrames = observation.count
-        let observationsNeeded = 30
+        let observationsNeeded = 60
         var multiArrayBuffer = [MLMultiArray]()
 
         for frameIndex in 0 ..< min(numAvailableFrames, observationsNeeded) {
@@ -146,13 +148,12 @@ class Predictor {
         }
         return MLMultiArray(concatenating: [MLMultiArray](multiArrayBuffer), axis: 0, dataType: .float)
     }
+    
     func resetMultiArray(_ predictionWindow: MLMultiArray, with value: Double = 0.0) throws {
         let pointer = try UnsafeMutableBufferPointer<Double>(predictionWindow)
         pointer.initialize(repeating: value)
 
     }
-
-
 
     func storeObservation(_ observation: VNHumanBodyPoseObservation) {
         if posesWindow.count >= predictionWindowSize {

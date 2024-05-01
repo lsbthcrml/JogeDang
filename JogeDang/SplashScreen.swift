@@ -44,6 +44,7 @@ struct ImageChanger: View {
         }
     }
 }
+
 func getImage()->[Image]{
     var images: [Image] = [Image("SPLASH PNG SEQ000")]
     

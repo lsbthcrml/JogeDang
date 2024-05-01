@@ -13,6 +13,7 @@
 		124F82D92BDF91E6003A1B02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124F82D82BDF91E6003A1B02 /* Preview Assets.xcassets */; };
 		124F82E02BDF93AA003A1B02 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124F82DF2BDF93AA003A1B02 /* SplashScreen.swift */; };
 		3077F6A82BE23AB600D20F39 /* DanceModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3077F6A72BE23AB600D20F39 /* DanceModel.mlmodel */; };
+		307B0BFF2BE26B60009E9D89 /* GaugeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B0BFE2BE26B60009E9D89 /* GaugeBar.swift */; };
 		54ADACA92BE0828F00CBFB8F /* lagu1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 54ADACA82BE0828E00CBFB8F /* lagu1.mp3 */; };
 		54ADACB32BE085A000CBFB8F /* Combined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ADACB22BE085A000CBFB8F /* Combined.swift */; };
 		54ADACB62BE0968000CBFB8F /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ADACB52BE0968000CBFB8F /* VideoCapture.swift */; };
@@ -30,6 +31,7 @@
 		124F82DF2BDF93AA003A1B02 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		3077F6A72BE23AB600D20F39 /* DanceModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DanceModel.mlmodel; sourceTree = "<group>"; };
 		307B0BFB2BE24023009E9D89 /* DanceModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = DanceModel.mlmodel; path = "../../../03_NANO 1 (GO YOUNG)/JogeDang/JogeDang/DanceModel.mlmodel"; sourceTree = "<group>"; };
+		307B0BFE2BE26B60009E9D89 /* GaugeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeBar.swift; sourceTree = "<group>"; };
 		54ADACA82BE0828E00CBFB8F /* lagu1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lagu1.mp3; sourceTree = "<group>"; };
 		54ADACB22BE085A000CBFB8F /* Combined.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combined.swift; sourceTree = "<group>"; };
 		54ADACB52BE0968000CBFB8F /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				124F82D32BDF91E5003A1B02 /* ContentView.swift */,
 				54ADACB22BE085A000CBFB8F /* Combined.swift */,
 				54EC529C2BE205CD003F33AF /* InterfaceView.swift */,
+				307B0BFE2BE26B60009E9D89 /* GaugeBar.swift */,
 				54ADACA72BE0828E00CBFB8F /* Lagu */,
 				124F82D52BDF91E6003A1B02 /* Assets.xcassets */,
 				124F82D72BDF91E6003A1B02 /* Preview Content */,
@@ -189,8 +192,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				54ADACBA2BE096A200CBFB8F /* ViewController.swift in Sources */,
+				307B0BFF2BE26B60009E9D89 /* GaugeBar.swift in Sources */,
 				54ADACB62BE0968000CBFB8F /* VideoCapture.swift in Sources */,
-				307B0BFD2BE24093009E9D89 /* DanceModel.mlmodel in Sources */,
 				124F82E02BDF93AA003A1B02 /* SplashScreen.swift in Sources */,
 				54EC529D2BE205CD003F33AF /* InterfaceView.swift in Sources */,
 				54ADACB32BE085A000CBFB8F /* Combined.swift in Sources */,

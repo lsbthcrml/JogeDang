@@ -36,6 +36,15 @@ struct ContentView: View {
     }
 }
 
+class Dance: ObservableObject {
+    @Published var danceTime: Int = 0
+    
+    func addDanceTime() {
+        danceTime += 1
+        print(danceTime)
+    }
+}
+
 #Preview {
     ContentView(images: getImage())
 }

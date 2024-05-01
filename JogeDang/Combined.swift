@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct Combined: View {
+    @State var danceTime: TimeInterval = 0.0
+    
     var body: some View {
         
         ZStack {
-          VideoView().ignoresSafeArea()
+          VideoView(danceTime: $danceTime).ignoresSafeArea()
             
             VStack {
-                InterfaceView()
+                InterfaceView(danceTime: $danceTime)
             }
             
             //insert filter
@@ -24,15 +26,20 @@ struct Combined: View {
     }
 }
 
-
-
-struct VideoView: UIViewControllerRepresentable{
+struct VideoView: UIViewControllerRepresentable, ViewControllerDelegate {
+    @Binding var danceTime: TimeInterval
+    
+    func addDanceTime(danceTime: TimeInterval) {
+        self.danceTime += danceTime
+    }
+    
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         
     }
     
     func makeUIViewController(context: Context) -> some UIViewController {
         let vc = ViewController()
+        vc.delegate = self
 
         return vc
     }
